@@ -47,7 +47,7 @@ while i<len(close)-len(vBottom): #Same lenght of pattern
     rng=close[i:i+len(vBottom)] #Look foward
 
     #region Check if range has good volatility
-    windowData=close[i-199+len(vBottom):i+len(vBottom)]
+    windowData=close[i-window-1+len(vBottom):i+len(vBottom)]
     windowChange=max(windowData['Close'])/min(windowData['Close'])-1
     change=max(rng['Close'])/min(rng['Close'])-1
     #endregion
