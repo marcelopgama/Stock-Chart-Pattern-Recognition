@@ -29,7 +29,7 @@ def scaleChange(range):
     b=(5-1)/(maxValue-minValue)
     a=1-b*minValue
     newRng=[]
-    for x in rng['Close']:
+    for x in range:
         newRng.append(round(b*x+a,6))
     return newRng    
 

@@ -33,7 +33,7 @@ def scaleChange(range):
     b=(5-1)/(maxValue-minValue)
     a=1-b*minValue
     newRng=[]
-    for x in rng['Close']:
+    for x in range:
         newRng.append(round(b*x+a,6))
     return newRng    
 
@@ -108,7 +108,7 @@ fig.autofmt_xdate()
 line2 = ax2.plot([])
 width=15/(24*60) #fraction of the day
 candlestick_ohlc(ax, newStockData.values, width=width, colorup='green', colordown='red', alpha=1)
-candlestick_ohlc(ax2, newStockData.values, width=width, colorup='green', colordown='red', alpha=1)
+candlestick_ohlc(ax2, newStockData.values, width=width, colorup='green', colordown='red', alpha=0.6)
 
 #endregion
 
@@ -118,9 +118,7 @@ def onselect(xmin, xmax):
     region_x = newStockData['index'][indmin:indmax]
     region_y = newStockData['Close'][indmin:indmax]    
 
-    if len(region_x) >= 2:
-        ax2.set_xlim(region_x.head(1).values, region_x.tail(1).values)               
-        ax2.set_ylim(region_y.min()*0.998, region_y.max()*1.002)
+    if len(region_x) >= 2:        
         ax.set_xlim(region_x.head(1).values, region_x.tail(1).values)               
         ax.set_ylim(region_y.min()*0.998, region_y.max()*1.002)
         fig.canvas.draw()
