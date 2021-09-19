@@ -9,7 +9,11 @@ Neste exemplo serão determinados os padrões V-Top e V-Bottom.
 
 ## 2 - Determinação dos padrões:
 #### Foi utilizada uma escala de 1 a 5, mas esta pode ser determinada pelo próprio usuário.
-![image](https://user-images.githubusercontent.com/44553201/133943485-280112ca-6580-45b1-8cca-bb18b59146ad.png)
+
+<div>
+  <img src="https://user-images.githubusercontent.com/44553201/133943485-280112ca-6580-45b1-8cca-bb18b59146ad.png" >
+  <img src="https://user-images.githubusercontent.com/44553201/133943785-30d9df0c-90a2-44e1-b8bf-be1cc7699497.png" >  
+</div>
 
 ## 3 - Função para mudar a escala:
 #### Como os preços não estão numa escala de 1 a 5 assim como os padrões, os dados não podem ser comparados. Então deve ser utilizada esta função para transformar os preços.
